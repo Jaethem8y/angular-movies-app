@@ -14,6 +14,9 @@ import { ProfitPipe } from './pipes/profit.pipe';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { DetailsActorsComponent } from './components/details-actors/details-actors.component';
+import { AppRoutesModule } from './modules/app.routes';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,13 @@ import { HomeComponent } from './components/home/home.component';
     LoaderComponent,
     ModalComponent,
     NavbarComponent,
+    DetailsActorsComponent,
+    NotFoundComponent,
     // Pipes
-    ProfitPipe
+    ProfitPipe,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutesModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
